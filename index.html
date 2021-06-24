@@ -1,255 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artist | Landing Page</title>
 
-     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="aos-by-red.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <style>
-        header{
-            background: url(img/sam-moqadam-X_fGkgqpAic-unsplash.jpg);
-            background-size: cover;
-            background-position: center;
-            min-height: 1000px;;
-        }
-        section{
-            padding-top: 4vh;
-            padding-bottom: 4vw;
-        }
-        
-        .tabs .tab a:focus, 
-        .tabs .tab a:focus.active {
-            background-color: rgba(52, 111, 129, 0.2);
-            outline: none;
-        }
-        @media screen and (max-width: 670px){
-            header{
-                min-height: 500px;
-            }
-        }
-    </style>
-</head>
-<body>
-     <!-- navbar -->
-    <header>
-        <nav class="nav-wrapper transparent">
-            <div class="container">
-                <a href="" class="brand-logo">reckoner</a>
-                <a href="" class="sidenav-trigger" data-target="mobile-menu">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#photos">Photos</a></li>
-                    <li><a href="#tours">Tours</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="tooltipped btn-floating btn-small transparent" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" class="tooltipped btn-floating btn-small transparent" data-tooltip="Facebook"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#" class="tooltipped btn-floating btn-small transparent" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a></li>
-                </ul>
+      header {
+        background: url(img/sam-moqadam-X_fGkgqpAic-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 1000px;
+      }
+      section {
+        padding-top: 4vh;
+        padding-bottom: 4vw;
+      }
 
-                <ul class="sidenav grey lighten-2" id="mobile-menu">
-                    <li><a href="#">Photos</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-        </nav>
+      .tabs .tab a:focus,
+      .tabs .tab a:focus.active {
+        background-color: rgba(52, 111, 129, 0.2);
+        outline: none;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      @media screen and (max-width: 670px) {
+        header {
+          min-height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <nav class="nav-wrapper transparent">
+        <div class="container" id="top">
+          <a href="" class="brand-logo">reckoner</a>
+          <a href="" class="sidenav-trigger" data-target="mobile-menu">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a
+                href="#"
+                class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+
+          <ul class="sidenav grey lighten-2" id="mobile-menu">
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-
     <!-- photo / grid -->
-    <section class="container scrollspy" id="photos">
-        <div class="row valign-wrapper">
-            <div class="col s12 l4">
-                <img src="img/sebastiaan-stam-ialpoHRxnw0-unsplash.jpg" alt="" class="responsive-img materialboxed">
-            </div>
-            <div class="col s12 l6 offset-l1 r">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis optio neque, sapiente facere aperiam deserunt et dolore, sed quia similique molestias porro, fugiat error ratione. Quas neque obcaecati dignissimos tempora?</p>
-            </div>
+    <section class="container scrollspy" id="photos" data-aos="fade-left">
+      <div class="row valign-wrapper">
+        <div class="col s12 l4">
+          <img
+            src="img/sebastiaan-stam-ialpoHRxnw0-unsplash.jpg"
+            alt=""
+            class="responsive-img materialboxed"
+          />
         </div>
+        <div class="col s12 l6 offset-l1 center-align">
+          <p>Find your perfect concert wherever you are</p>
+        </div>
+      </div>
 
-        <div class="row valign-wrapper">
-            <div class="col s12 l4 push-l7">
-                <img src="img/sam-moqadam-Ho91qD-tmBw-unsplash.jpg" alt="" class="responsive-img materialboxed">
-            </div>
-            <div class="col s12 l6 pull-l5 right-align">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis optio neque, sapiente facere aperiam deserunt et dolore, sed quia similique molestias porro, fugiat error ratione. Quas neque obcaecati dignissimos tempora?</p>
-            </div>
+      <div class="row valign-wrapper">
+        <div class="col s12 l4 push-l7">
+          <img
+            src="img/sam-moqadam-Ho91qD-tmBw-unsplash.jpg"
+            alt=""
+            class="responsive-img materialboxed"
+          />
         </div>
+        <div class="col s12 l6 pull-l5 center-align">
+          <p>
+            Sell music, merch, downloads & tickets, commission-free Add a store
+            in just two clicks and start selling music, downloads, tickets, and
+            band merch today.
+          </p>
+        </div>
+      </div>
 
-        <div class="row valign-wrapper">
-            <div class="col s12 l4">
-                <img src="img/sebastiaan-stam-j9y8dEUBUWE-unsplash.jpg" alt="" class="responsive-img materialboxed">
-            </div>
-            <div class="col s12 l6 offset-l1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis optio neque, sapiente facere aperiam deserunt et dolore, sed quia similique molestias porro, fugiat error ratione. Quas neque obcaecati dignissimos tempora?</p>
-            </div>
+      <div class="row valign-wrapper">
+        <div class="col s12 l4">
+          <img
+            src="img/sebastiaan-stam-j9y8dEUBUWE-unsplash.jpg"
+            alt=""
+            class="responsive-img materialboxed"
+          />
         </div>
+        <div class="col s12 l6 offset-l1 center-align">
+          <p>
+            Add a tour calendar to your website in a few clicks, or sync with
+            Bandsintown. Give fans detailed event info and sharing links..
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- parallax -->
     <div class="parallax-container">
-        <div class="parallax">
-            <img src="img/tomas-malik-X1Y9XmMq9wI-unsplash.jpg" alt="" class="responsive-img">
-        </div>
+      <div class="parallax">
+        <img
+          src="img/tomas-malik-X1Y9XmMq9wI-unsplash.jpg"
+          alt=""
+          class="responsive-img"
+        />
+      </div>
     </div>
 
     <!-- services/tabs -->
-    <section class="container section scrollspy" id="tours">
-        <div class="row">
-            <div class="col s12 l4">
-                <h4 class="black-text text-darken-4">
-                    Tours Dates
-                </h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quaerat vitae fuga suscipit consectetur eius, officia quisquam voluptatum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, dolore! Voluptatum odit distinctio necessitatibus minima quis nostrum eum rerum optio harum quod nemo id, vitae ullam cum magnam beatae maiores vel molestias? Adipisci similique ullam, omnis atque debitis incidunt ipsam tenetur minus repellat fuga! Corporis quas ipsam atque aperiam officia.</p>
-            </div>
-            <div class="col s12 l6 offset-l2">
-                <ul class="tabs">
-                    <li class="tab col s6">
-                        <a href="#amsterdam-venues" class="black-text text-darken-4">Amsterdam</a>
-                    </li>
-                    <li class="tab col s6">
-                        <a href="#london-venues" class="black-text text-darken-4">London</a>
-                    </li>
-                </ul>
-
-                <div class="col s12 center-align" id="amsterdam-venues">
-                    <h6 class="black-text text-darken-4">Amsterdam Venues</h6>
-                    <p>ABC</p>
-                    <p>DEF</p>
-                    <p>IJK</p>
-                </div>
-
-                <div class="col s12 center-align" id="london-venues">
-                    <h6 class="black-text text-darken-4">London Venues</h6>
-                    <p>XYZ</p>
-                    <p>JKF</p>
-                    <p>DKS</p>
-                </div>
-            </div>
+    <section class="container section scrollspy" id="tours" data-aos="fade-up">
+      <div class="row">
+        <div class="col s12 l4">
+          <h4 class="black-text text-darken-4">Tours Dates</h4>
+          <p>
+            Integrated reporting tools let you know who your customers are,
+            where they come from, and what they're buying.
+          </p>
+          <p>
+            We're online 7 days a week to give you hands-on assistance by live
+            chat and email. Our team is made up of singers, producers, and music
+            geeks who also happen to be expert web designers. Our goal is to
+            empower you to build the most effective website for your music.
+          </p>
         </div>
+        <div class="col s12 l6 offset-l2">
+          <ul class="tabs">
+            <li class="tab col s6">
+              <a href="#amsterdam-venues" class="black-text text-darken-4"
+                >Amsterdam</a
+              >
+            </li>
+            <li class="tab col s6">
+              <a href="#london-venues" class="black-text text-darken-4"
+                >London</a
+              >
+            </li>
+          </ul>
 
+          <div class="col s12 center-align" id="amsterdam-venues">
+            <h6 class="black-text text-darken-4">Amsterdam Venues</h6>
+            <p>Transformatorhuis - Westergasterrein</p>
+            <p>DoubleTree</p>
+            <p>Pakhuis De Zwijger</p>
+          </div>
+
+          <div class="col s12 center-align" id="london-venues">
+            <h6 class="black-text text-darken-4">London Venues</h6>
+            <p>Delfont Mackintosh Theatres</p>
+            <p>Nederlander Organization</p>
+            <p>Aldwych Dominion</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- parallax -->
     <div class="parallax-container">
-        <div class="parallax">
-            <img src="img/nathan-mullet-nO4Hmfpvc4w-unsplash.jpg" alt="" class="responsive-img">
-        </div>
+      <div class="parallax">
+        <img
+          src="img/nathan-mullet-nO4Hmfpvc4w-unsplash.jpg"
+          alt=""
+          class="responsive-img"
+        />
+      </div>
     </div>
 
     <!-- services/tabs -->
-    <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod recusandae veniam, exercitationem ut eveniet quisquam quia iure molestias sequi vel molestiae incidunt, perferendis ipsa. Optio, facilis accusantium. Modi, dolorum illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsum quam aspernatur temporibus maxime enim reprehenderit eaque maiores et veritatis corporis beatae, excepturi dignissimos alias nemo, ut facere nisi tenetur.</p>
+    <div class="container" data-aos="fade-up">
+      <p>
+        With hundreds of outstanding event venues listed on our search platform
+        it can be challenging to create a shortlist. With so many great venues
+        to choose from we have tried to group similar venues together to make
+        browsing for venue ideas as easy as possible! Good luck with your venue
+        search and remember that we are here to help! You will find an extensive
+        selection of wonderful and surprising event spaces throughout our
+        website, with thousands more venues available from our team.
+      </p>
+      <p>
+        If you are looking for London venues to surprise your guests then check
+        out these funky venues and unusual event spaces. For a more refined and
+        sophisticated event brief, this selection of breathtaking elegant venues
+        could work well, or our shortlist of beautiful London venues here might
+        do the trick! For any event planners that have a specific event in mind
+        you can easily filter for suitable venues on our venue map search page.
+      </p>
     </div>
 
     <!-- parallax -->
     <div class="parallax-container">
-        <div class="parallax">
-            <img src="img/marco-ten-hoff-3ZJrvc76hcA-unsplash.jpg" alt="" class="responsive-img">
-        </div>
+      <div class="parallax">
+        <img
+          src="img/marco-ten-hoff-3ZJrvc76hcA-unsplash.jpg"
+          alt=""
+          class="responsive-img"
+        />
+      </div>
     </div>
 
     <!-- contact form -->
-    <section class="section container scrollspy" id="contact">
-        <div class="row">
-            <div class="col s12 l5">
-                <h2 class="indigo-text text-darken-4">Get in Touch</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo atque sed amet eos, cupiditate optio iste corrupti perspiciatis nostrum. Accusantium.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quo dicta ipsa nihil, suscipit eaque blanditiis harum autem odio repellat sint recusandae omnis incidunt debitis?</p>
-            </div>
-            <div class="col s12 l5 offset-l2">
-                <form action="">
-                    <div class="input-field">
-                        <i class="material-icons prefix">email</i>
-                        <input type="email" id="email">
-                        <label for="email">Your email</label>
-                    </div>
-                    <div class="input-field">
-                        <i class="material-icons prefix">message</i>
-                        <textarea id="message" class="materialize-textarea"></textarea>
-                        <label for="message">Your message</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" id="date" class="datepicker">
-                        <label for="date">Choose a date</label>
-                    </div>
-                    <div class="input-field">
-                        <p>Services</p>
-                        <p>
-                            <label>
-                                <input type="checkbox">
-                                <span>Gigs</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox">
-                                <span>Bar Mitzvahs</span>
-                            </label>
-                        </p>
-                    </div>
-
-                    <div class="input-field center">
-                        <button class="btn">Submit</button>
-                    </div>
-                </form>
-            </div>
+    <section
+      class="section container scrollspy"
+      id="contact"
+      data-aos="fade-up"
+    >
+      <div class="row">
+        <div class="col s12 l5">
+          <h2 class="indigo-text text-darken-4">Get in Touch</h2>
+          <p>
+            Finding the perfect London venue for your event can be time
+            consuming and difficult. Even with our venue search tools and
+            articles for inspiration, nothing can beat a venue finding expert
+            doing everything for you!
+          </p>
+          <p>
+            Save yourself time and find the best deals by contacting our
+            professional venue finders. For many event briefs our team can
+            provide free London venue finding support and will send you a
+            proposal with a tailored selection of venues to suit your event
+            brief. Tell us about your event and venue requirements below and our
+            team will be in touch to help you find the perfect venue for your
+            next event!
+          </p>
         </div>
+        <div class="col s12 l5 offset-l2">
+          <form action="">
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email" />
+              <label for="email">Your email</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">message</i>
+              <textarea id="message" class="materialize-textarea"></textarea>
+              <label for="message">Your message</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="date" class="datepicker" />
+              <label for="date">Choose a date</label>
+            </div>
+            <div class="input-field">
+              <p>Services</p>
+              <p>
+                <label>
+                  <input type="checkbox" />
+                  <span>Gigs</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" />
+                  <span>Bar Mitzvahs</span>
+                </label>
+              </p>
+            </div>
+
+            <div class="input-field center">
+              <button class="btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <button class="btn" style="background-color: #ff6347">
+        <a href="#top">Back To Top</a>
+      </button>
     </section>
 
     <!-- footer -->
     <footer class="page-footer grey darken-3">
-        <div class="container">
-            <div class="row center-align">
-                <div class="col s12 l6">
-                    <h6>coded by rhu</h6>
-                </div>
-                <div class="col s12 l4 offset-l2">
-                    <h5>
-                        Connect
-                    </h5>
-                    <ul>
-                        <li><a href="https://github.com/rhulog" class="grey-text text-lighten-3">Github</a></li>
-                        <li><a href="https://twitter.com/rhuminations" class="grey-text text-lighten-3">Twitter</a></li>
-                    </ul>
-                </div> 
-            </div>
+      <div class="container">
+        <div class="row center-align">
+          <div class="col s12 l6">
+            <h6>coded by dhruvMohapatra</h6>
+          </div>
+          <div class="col s12 l4 offset-l2">
+            <h5>Connect</h5>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/dhruvmohapatra"
+                  class="grey-text text-lighten-3"
+                  >Github</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/rhuminations"
+                  class="grey-text text-lighten-3"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <div class="footer-copyright grey darken-4">
-            <div class="container center-align">&copy; 2021 rhu</div>
-        </div>
+      <div class="footer-copyright grey darken-4">
+        <div class="container center-align">&copy; 2021 dhruvMohapatra</div>
+      </div>
     </footer>
-
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
-            $('.materialboxed').materialbox();
-            $('.parallax').parallax();
-            $('.tabs').tabs();
-            $('.datepicker').datepicker({
-                disableWeekends: true
-            });
-            $('.tooltipped').tooltip();
-            $('.scrollspy').scrollSpy();
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+        $(".materialboxed").materialbox();
+        $(".parallax").parallax();
+        $(".tabs").tabs();
+        $(".datepicker").datepicker({
+          disableWeekends: true,
         });
-        
-      </script>
-</body>
+        $(".tooltipped").tooltip();
+        $(".scrollspy").scrollSpy();
+      });
+    </script>
+  </body>
 </html>
