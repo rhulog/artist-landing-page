@@ -5,7 +5,6 @@ The challenge is to make an artist landing page using Materialize CSS.
 
  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -18,11 +17,6 @@ Create a fully responsive artist landing page. Execute with Materialize CSS and 
 ### Screenshot
 
 ![](./Screenshot.png)
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 I laid out the HTML and the CSS integration was seemless. The grid based system of Materialize was smooth to integrate and easily created the  website, cutting down my mock-up creation time by half.
